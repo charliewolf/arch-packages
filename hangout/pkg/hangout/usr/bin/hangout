@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+exec electron /usr/share/hangouts/app.asar $@
+

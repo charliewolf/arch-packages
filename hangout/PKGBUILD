@@ -1,0 +1,32 @@
+# Maintainer: Charlie Wolf <charlie@wolf.is>
+
+pkgname=hangout
+pkgver=0.0.1
+pkgrel=1
+pkgdesc="Google hangouts with a proxy"
+arch=('x86_64' 'i686')
+license=('proprietary')
+depends=('electron>=1.4.0')
+makedepends=('asar')
+source=('app.js' 'package.json' 'icon.png' 'hangout')
+
+sha256sums=(
+  '753f514539292f306f036460f64a9e4b2d2fe5248aef6092daa9e3ef47fedd1d'
+  '7884729e43943675e511263f7246d27bd7ffc744f4e330fb20af4340a6545a8d'
+  'ffc49fbe4ab9ddca437a01515caf14b84dc91398bf29060f310aacb008c9c5a1'
+  '27136d3f1fdf42c862385464fcd65e2486d866f9c89852a446dff17bcf24378f'
+)
+
+
+build() {
+    mkdir ${srcdir}/app
+    cp -L ${srcdir}/app.js ${srcdir}/package.json ${srcdir}/icon.png ${srcdir}/app
+    asar pack ${srcdir}/app ${srcdir}/app.asar
+}
+package() {
+  install -dm755 "${pkgdir}/usr/share"
+  install -dm755 "${pkgdir}/usr/share/hangouts"
+  install -dm755 "${pkgdir}/usr/bin"
+  install -Dm644 "${srcdir}/app.asar" "${pkgdir}/usr/share/hangouts/app.asar"
+  install -Dm755 "${srcdir}/hangout" "${pkgdir}/usr/bin/hangout"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "hangouts-electron",
+  "main": "app.js",
+  "private": true
+}
