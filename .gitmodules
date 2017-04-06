@@ -151,3 +151,6 @@
 [submodule "firefox-searchengine-ddghtml"]
 	path = firefox-searchengine-ddghtml
 	url = https://aur.archlinux.org/firefox-searchengine-ddghtml
+[submodule "asciiflow2-git"]
+	path = asciiflow2-git
+	url = https://aur.archlinux.org/asciiflow2-git
