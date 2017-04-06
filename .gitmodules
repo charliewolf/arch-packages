@@ -1,0 +1,153 @@
+[submodule "android-platform-22"]
+	path = android-platform-22
+	url = https://aur.archlinux.org/android-platform-22.git
+[submodule "android-platform-25"]
+	path = android-platform-25
+	url = https://aur.archlinux.org/android-platform-25.git
+[submodule "android-sdk"]
+	path = android-sdk
+	url = https://aur.archlinux.org/android-sdk.git
+[submodule "android-sdk-build-tools"]
+	path = android-sdk-build-tools
+	url = https://aur.archlinux.org/android-sdk-build-tools.git
+[submodule "android-sdk-build-tools-22"]
+	path = android-sdk-build-tools-22
+	url = https://aur.archlinux.org/android-sdk-build-tools-22.git
+[submodule "android-sdk-platform-tools"]
+	path = android-sdk-platform-tools
+	url = https://aur.archlinux.org/android-sdk-platform-tools.git
+[submodule "cower"]
+	path = cower
+	url = https://aur.archlinux.org/cower.git
+[submodule "etherwall"]
+	path = etherwall
+	url = https://aur.archlinux.org/etherwall.git
+[submodule "git-crypt"]
+	path = git-crypt
+	url = https://aur.archlinux.org/git-crypt.git
+[submodule "gnome-vfs"]
+	path = gnome-vfs
+	url = https://aur.archlinux.org/gnome-vfs.git
+[submodule "khal"]
+	path = khal
+	url = https://aur.archlinux.org/khal.git
+[submodule "lib32-libmng"]
+	path = lib32-libmng
+	url = https://aur.archlinux.org/lib32-libmng.git
+[submodule "lib32-qt4"]
+	path = lib32-qt4
+	url = https://aur.archlinux.org/lib32-qt4.git
+[submodule "libbonobo"]
+	path = libbonobo
+	url = https://aur.archlinux.org/libbonobo.git
+[submodule "libbonoboui"]
+	path = libbonoboui
+	url = https://aur.archlinux.org/libbonoboui.git
+[submodule "libgnome"]
+	path = libgnome
+	url = https://aur.archlinux.org/libgnome.git
+[submodule "libgnomeui"]
+	path = libgnomeui
+	url = https://aur.archlinux.org/libgnomeui.git
+[submodule "linode-cli"]
+	path = linode-cli
+	url = https://aur.archlinux.org/linode-cli.git
+[submodule "mail-notification"]
+	path = mail-notification
+	url = https://aur.archlinux.org/mail-notification.git
+[submodule "neomutt"]
+	path = neomutt
+	url = https://aur.archlinux.org/neomutt.git
+[submodule "opencryptoki"]
+	path = opencryptoki
+	url = https://aur.archlinux.org/opencryptoki.git
+[submodule "orbit2"]
+	path = orbit2
+	url = https://aur.archlinux.org/orbit2.git
+[submodule "perl-webservice-linode"]
+	path = perl-webservice-linode
+	url = https://aur.archlinux.org/perl-webservice-linode.git
+[submodule "python-atomicwrites"]
+	path = python-atomicwrites
+	url = https://aur.archlinux.org/python-atomicwrites.git
+[submodule "python-click-log"]
+	path = python-click-log
+	url = https://aur.archlinux.org/python-click-log.git
+[submodule "python-click-threading"]
+	path = python-click-threading
+	url = https://aur.archlinux.org/python-click-threading.git
+[submodule "python-icalendar"]
+	path = python-icalendar
+	url = https://aur.archlinux.org/python-icalendar.git
+[submodule "python-pytest-localserver"]
+	path = python-pytest-localserver
+	url = https://aur.archlinux.org/python-pytest-localserver.git
+[submodule "python-pytest-subtesthack"]
+	path = python-pytest-subtesthack
+	url = https://aur.archlinux.org/python-pytest-subtesthack.git
+[submodule "python-pytest-xprocess"]
+	path = python-pytest-xprocess
+	url = https://aur.archlinux.org/python-pytest-xprocess.git
+[submodule "python-sphinxcontrib-newsfeed"]
+	path = python-sphinxcontrib-newsfeed
+	url = https://aur.archlinux.org/python-sphinxcontrib-newsfeed.git
+[submodule "python-tzlocal"]
+	path = python-tzlocal
+	url = https://aur.archlinux.org/python-tzlocal.git
+[submodule "python-wsgi-intercept"]
+	path = python-wsgi-intercept
+	url = https://aur.archlinux.org/python-wsgi-intercept.git
+[submodule "qarma"]
+	path = qarma
+	url = https://aur.archlinux.org/qarma.git
+[submodule "radicale"]
+	path = radicale
+	url = https://aur.archlinux.org/radicale.git
+[submodule "redsocks-git"]
+	path = redsocks-git
+	url = https://aur.archlinux.org/redsocks-git.git
+[submodule "skype"]
+	path = skype
+	url = https://aur.archlinux.org/skype.git
+[submodule "slack-desktop"]
+	path = slack-desktop
+	url = https://aur.archlinux.org/slack-desktop.git
+[submodule "ssss"]
+	path = ssss
+	url = https://aur.archlinux.org/ssss.git
+[submodule "sublime-text-nightly"]
+	path = sublime-text-nightly
+	url = https://aur.archlinux.org/sublime-text-nightly.git
+[submodule "telegram-desktop-bin"]
+	path = telegram-desktop-bin
+	url = https://aur.archlinux.org/telegram-desktop-bin.git
+[submodule "tor-browser-en"]
+	path = tor-browser-en
+	url = https://aur.archlinux.org/tor-browser-en.git
+[submodule "tpm-tools"]
+	path = tpm-tools
+	url = https://aur.archlinux.org/tpm-tools.git
+[submodule "trousers"]
+	path = trousers
+	url = https://aur.archlinux.org/trousers.git
+[submodule "vdirsyncer"]
+	path = vdirsyncer
+	url = https://aur.archlinux.org/vdirsyncer.git
+[submodule "firefox-umatrix"]
+	path = firefox-umatrix
+	url = https://aur.archlinux.org/firefox-umatrix
+[submodule "firefox-extension-dustman"]
+	path = firefox-extension-dustman
+	url = https://aur.archlinux.org/firefox-extension-dustman
+[submodule "firefox-extension-proxy-switcher"]
+	path = firefox-extension-proxy-switcher
+	url = https://aur.archlinux.org/firefox-extension-proxy-switcher
+[submodule "firefox-extension-self-destructing-cookies"]
+	path = firefox-extension-self-destructing-cookies
+	url = https://aur.archlinux.org/firefox-extension-self-destructing-cookies
+[submodule "firefox-extension-leechblock"]
+	path = firefox-extension-leechblock
+	url = https://aur.archlinux.org/firefox-extension-leechblock
+[submodule "firefox-searchengine-ddghtml"]
+	path = firefox-searchengine-ddghtml
+	url = https://aur.archlinux.org/firefox-searchengine-ddghtml
