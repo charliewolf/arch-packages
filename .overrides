@@ -1,0 +1,6 @@
+libdbus: dbus
+lib32-libgl: lib32-mesa
+lib32-mesa-libgl: lib32-mesa
+pkgconfig: pkg-config
+libgnome-data: libgnome
+java-environment: jdk8-openjdk

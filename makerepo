@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+rm -f repo/
+mkdir repo/
+find -name '*.pkg.tar*' -type f|xargs repo-add --sign repo/repo.db.tar.gz
+

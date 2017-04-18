@@ -1,156 +1,212 @@
 [submodule "android-platform-22"]
 	path = android-platform-22
 	url = https://aur.archlinux.org/android-platform-22.git
+	ignore = untracked
 [submodule "android-platform-25"]
 	path = android-platform-25
 	url = https://aur.archlinux.org/android-platform-25.git
+	ignore = untracked
 [submodule "android-sdk"]
 	path = android-sdk
 	url = https://aur.archlinux.org/android-sdk.git
+	ignore = untracked
 [submodule "android-sdk-build-tools"]
 	path = android-sdk-build-tools
 	url = https://aur.archlinux.org/android-sdk-build-tools.git
+	ignore = untracked
 [submodule "android-sdk-build-tools-22"]
 	path = android-sdk-build-tools-22
 	url = https://aur.archlinux.org/android-sdk-build-tools-22.git
+	ignore = untracked
 [submodule "android-sdk-platform-tools"]
 	path = android-sdk-platform-tools
 	url = https://aur.archlinux.org/android-sdk-platform-tools.git
+	ignore = untracked
 [submodule "cower"]
 	path = cower
 	url = https://aur.archlinux.org/cower.git
+	ignore = untracked
 [submodule "etherwall"]
 	path = etherwall
 	url = https://aur.archlinux.org/etherwall.git
+	ignore = untracked
 [submodule "git-crypt"]
 	path = git-crypt
 	url = https://aur.archlinux.org/git-crypt.git
+	ignore = untracked
 [submodule "gnome-vfs"]
 	path = gnome-vfs
 	url = https://aur.archlinux.org/gnome-vfs.git
+	ignore = untracked
 [submodule "khal"]
 	path = khal
 	url = https://aur.archlinux.org/khal.git
+	ignore = untracked
 [submodule "lib32-libmng"]
 	path = lib32-libmng
 	url = https://aur.archlinux.org/lib32-libmng.git
+	ignore = untracked
 [submodule "lib32-qt4"]
 	path = lib32-qt4
 	url = https://aur.archlinux.org/lib32-qt4.git
+	ignore = untracked
 [submodule "libbonobo"]
 	path = libbonobo
 	url = https://aur.archlinux.org/libbonobo.git
+	ignore = untracked
 [submodule "libbonoboui"]
 	path = libbonoboui
 	url = https://aur.archlinux.org/libbonoboui.git
+	ignore = untracked
 [submodule "libgnome"]
 	path = libgnome
 	url = https://aur.archlinux.org/libgnome.git
+	ignore = untracked
 [submodule "libgnomeui"]
 	path = libgnomeui
 	url = https://aur.archlinux.org/libgnomeui.git
+	ignore = untracked
 [submodule "linode-cli"]
 	path = linode-cli
 	url = https://aur.archlinux.org/linode-cli.git
+	ignore = untracked
 [submodule "mail-notification"]
 	path = mail-notification
 	url = https://aur.archlinux.org/mail-notification.git
+	ignore = untracked
 [submodule "neomutt"]
 	path = neomutt
 	url = https://aur.archlinux.org/neomutt.git
+	ignore = untracked
 [submodule "opencryptoki"]
 	path = opencryptoki
 	url = https://aur.archlinux.org/opencryptoki.git
+	ignore = untracked
 [submodule "orbit2"]
 	path = orbit2
 	url = https://aur.archlinux.org/orbit2.git
+	ignore = untracked
 [submodule "perl-webservice-linode"]
 	path = perl-webservice-linode
 	url = https://aur.archlinux.org/perl-webservice-linode.git
+	ignore = untracked
 [submodule "python-atomicwrites"]
 	path = python-atomicwrites
 	url = https://aur.archlinux.org/python-atomicwrites.git
+	ignore = untracked
 [submodule "python-click-log"]
 	path = python-click-log
 	url = https://aur.archlinux.org/python-click-log.git
+	ignore = untracked
 [submodule "python-click-threading"]
 	path = python-click-threading
 	url = https://aur.archlinux.org/python-click-threading.git
+	ignore = untracked
 [submodule "python-icalendar"]
 	path = python-icalendar
 	url = https://aur.archlinux.org/python-icalendar.git
+	ignore = untracked
 [submodule "python-pytest-localserver"]
 	path = python-pytest-localserver
 	url = https://aur.archlinux.org/python-pytest-localserver.git
+	ignore = untracked
 [submodule "python-pytest-subtesthack"]
 	path = python-pytest-subtesthack
 	url = https://aur.archlinux.org/python-pytest-subtesthack.git
+	ignore = untracked
 [submodule "python-pytest-xprocess"]
 	path = python-pytest-xprocess
 	url = https://aur.archlinux.org/python-pytest-xprocess.git
+	ignore = untracked
 [submodule "python-sphinxcontrib-newsfeed"]
 	path = python-sphinxcontrib-newsfeed
 	url = https://aur.archlinux.org/python-sphinxcontrib-newsfeed.git
+	ignore = untracked
 [submodule "python-tzlocal"]
 	path = python-tzlocal
 	url = https://aur.archlinux.org/python-tzlocal.git
+	ignore = untracked
 [submodule "python-wsgi-intercept"]
 	path = python-wsgi-intercept
 	url = https://aur.archlinux.org/python-wsgi-intercept.git
+	ignore = untracked
 [submodule "qarma"]
 	path = qarma
 	url = https://aur.archlinux.org/qarma.git
+	ignore = untracked
 [submodule "radicale"]
 	path = radicale
 	url = https://aur.archlinux.org/radicale.git
+	ignore = untracked
 [submodule "redsocks-git"]
 	path = redsocks-git
 	url = https://aur.archlinux.org/redsocks-git.git
+	ignore = untracked
 [submodule "skype"]
 	path = skype
 	url = https://aur.archlinux.org/skype.git
+	ignore = untracked
 [submodule "slack-desktop"]
 	path = slack-desktop
 	url = https://aur.archlinux.org/slack-desktop.git
+	ignore = untracked
 [submodule "ssss"]
 	path = ssss
 	url = https://aur.archlinux.org/ssss.git
+	ignore = untracked
 [submodule "sublime-text-nightly"]
 	path = sublime-text-nightly
 	url = https://aur.archlinux.org/sublime-text-nightly.git
+	ignore = untracked
 [submodule "telegram-desktop-bin"]
 	path = telegram-desktop-bin
 	url = https://aur.archlinux.org/telegram-desktop-bin.git
+	ignore = untracked
 [submodule "tor-browser-en"]
 	path = tor-browser-en
 	url = https://aur.archlinux.org/tor-browser-en.git
+	ignore = untracked
 [submodule "tpm-tools"]
 	path = tpm-tools
 	url = https://aur.archlinux.org/tpm-tools.git
+	ignore = untracked
 [submodule "trousers"]
 	path = trousers
 	url = https://aur.archlinux.org/trousers.git
+	ignore = untracked
 [submodule "vdirsyncer"]
 	path = vdirsyncer
 	url = https://aur.archlinux.org/vdirsyncer.git
+	ignore = untracked
 [submodule "firefox-umatrix"]
 	path = firefox-umatrix
 	url = https://aur.archlinux.org/firefox-umatrix
+	ignore = untracked
 [submodule "firefox-extension-dustman"]
 	path = firefox-extension-dustman
 	url = https://aur.archlinux.org/firefox-extension-dustman
+	ignore = untracked
 [submodule "firefox-extension-proxy-switcher"]
 	path = firefox-extension-proxy-switcher
 	url = https://aur.archlinux.org/firefox-extension-proxy-switcher
+	ignore = untracked
 [submodule "firefox-extension-self-destructing-cookies"]
 	path = firefox-extension-self-destructing-cookies
 	url = https://aur.archlinux.org/firefox-extension-self-destructing-cookies
+	ignore = untracked
 [submodule "firefox-extension-leechblock"]
 	path = firefox-extension-leechblock
 	url = https://aur.archlinux.org/firefox-extension-leechblock
+	ignore = untracked
 [submodule "firefox-searchengine-ddghtml"]
 	path = firefox-searchengine-ddghtml
 	url = https://aur.archlinux.org/firefox-searchengine-ddghtml
+	ignore = untracked
 [submodule "asciiflow2-git"]
 	path = asciiflow2-git
 	url = https://aur.archlinux.org/asciiflow2-git
+	ignore = untracked
+[submodule "mu"]
+	path = mu
+	url = https://aur.archlinux.org/mu.git
+	ignore = untracked

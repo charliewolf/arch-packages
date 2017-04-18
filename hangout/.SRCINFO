@@ -1,0 +1,20 @@
+pkgbase = hangout
+	pkgdesc = Google hangouts with a proxy
+	pkgver = 0.0.1
+	pkgrel = 1
+	arch = x86_64
+	arch = i686
+	license = proprietary
+	makedepends = asar
+	depends = electron>=1.4.0
+	source = app.js
+	source = package.json
+	source = icon.png
+	source = hangout
+	sha256sums = 753f514539292f306f036460f64a9e4b2d2fe5248aef6092daa9e3ef47fedd1d
+	sha256sums = 7884729e43943675e511263f7246d27bd7ffc744f4e330fb20af4340a6545a8d
+	sha256sums = ffc49fbe4ab9ddca437a01515caf14b84dc91398bf29060f310aacb008c9c5a1
+	sha256sums = 27136d3f1fdf42c862385464fcd65e2486d866f9c89852a446dff17bcf24378f
+
+pkgname = hangout
+

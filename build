@@ -1,0 +1,130 @@
+#!/usr/bin/env python
+
+# This ugly script does some simple AUR dependency tree processing and builds all the packages in this git repo
+
+import sys
+import yaml
+import re
+import requests
+import os
+import json
+import subprocess
+
+BASE_DIR = os.path.dirname(os.path.realpath(__file__))
+DEPENDENCY_KEYS = ('depends', 'makedepends', 'checkdepends', 'depends_x86_64', 'makedepends_x86_64', 'checkdepends_x86_64')
+OFFICIAL_REPOS = ('core', 'community', 'extra', 'multilib')
+PACKAGE_REGEX = re.compile('^([^<>=]*).*$')  # turns electron<=1.4.0 into electron
+
+
+# Utility functions
+def package_basename(package_name):
+    return PACKAGE_REGEX.match(package_name).groups()[0]
+
+
+def index_official_repos():
+    repo_packages = {}
+    for repo in OFFICIAL_REPOS:
+        repo_packages[repo] = subprocess.check_output(['pacman', '-Slq', repo]).decode('utf8').split()
+    return repo_packages
+
+
+def read_cache():
+    cache = {}
+    if os.path.exists(os.path.join(BASE_DIR, '.cache')):
+        with open(os.path.join(BASE_DIR, '.cache'), 'r') as fh:
+            cache.update(json.load(fh))
+    return cache
+
+
+def update_cache(cache):
+    with open(os.path.join(BASE_DIR, '.cache'), 'w') as fh:
+        json.dump(cache, fh)
+
+
+def read_overrides():
+    overrides = {}
+    if os.path.exists(os.path.join(BASE_DIR, '.overrides')):
+        with open(os.path.join(BASE_DIR, '.overrides'), 'r') as fh:
+            overrides.update(yaml.load(fh))
+    return overrides
+
+
+def process_aur_dependencies(packages):
+    cache = read_cache()
+    overrides = read_overrides()
+    repo_packages = index_official_repos()
+    dependencies = {}
+    for package in packages:
+        srcinfo_path = os.path.join(BASE_DIR, package, '.SRCINFO')
+        with open(srcinfo_path, 'r') as fh:
+            srcinfo = fh.read()
+            for line in srcinfo.splitlines():
+                if line.startswith('\t') and '=' in line:
+                    key = line.split()[0]
+                    value = '='.join(line.split('=')[1:]).lstrip(' ')
+                    if key.lower() in DEPENDENCY_KEYS:
+                        package_name = package_basename(value)
+                        package_name = overrides.get(package_name, package_name)
+                        repo = None
+                        if package_name not in cache:
+                            for repo_name, package_list in repo_packages.items():
+                                if package_name in package_list:
+                                    repo = repo_name
+                                    continue
+                            if not repo:
+                                pacman = subprocess.Popen(['pacman', '-Qm', package_name], stderr=subprocess.DEVNULL)
+                                pacman.wait()
+                                if pacman.returncode == 0:
+                                    repo = 'aur'
+                            if not repo:
+                                pkgdb = requests.get('https://www.archlinux.org/packages/search/json/', params=dict(name=package_name))
+                                pkgdb.raise_for_status()
+                                official = bool(len(pkgdb.json()['results']))
+                                repo = pkgdb.json()['results'][0]['repo'] if official else 'aur'
+                            cache[package_name] = repo
+                        if cache[package_name] == 'aur' and package_name not in packages:
+                            raise RuntimeError("Missing aur package %s" % package_name)
+                        dependencies[package] = dependencies.get(package, [])
+                        if cache[package_name] == 'aur' and package_name != package:
+                            dependencies[package].append(package_name)
+    update_cache(cache)
+    return dependencies
+
+
+def add_to_build_order(package, build_order, dependencies):
+    deps = dependencies.get(package, [])
+    all_in_order = all(pkg in build_order for pkg in deps)
+    if all_in_order:
+        index = max(build_order.index(pkg) for pkg in deps) + 1 if deps else 0
+        if package not in build_order:
+            build_order.insert(index, package)
+    else:
+        for dep in deps:
+            add_to_build_order(dep, build_order, dependencies)
+        build_order.append(package)
+    return build_order
+
+
+def main():
+    packages = sorted(set(dir.lower() for dir in os.listdir(BASE_DIR) if os.path.isdir(dir) and not dir.startswith('.') and os.path.exists(os.path.join(dir, '.SRCINFO'))))
+
+    dependencies = process_aur_dependencies(packages)
+
+    build_order = []
+    for package in packages:
+        add_to_build_order(package, build_order, dependencies)
+
+    for package in build_order:
+        make = subprocess.Popen(['makepkg', '--sign', '-Cs'], cwd=os.path.join(BASE_DIR, package), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print("Building %s" % package, file=sys.stderr)
+        out, err = make.communicate()
+        if make.returncode != 0:
+            if b'package has already been built' in err:
+                print("Skipping %s (already built)" % package, file=sys.stderr)
+            else:
+                raise RuntimeError(err)
+        else:
+            print("Built %s" % package, file=sys.stderr)
+
+if __name__ == '__main__':
+    main()

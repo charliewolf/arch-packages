@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Pulls the latest version from AUR
+
+
+for directory in `git config --file .gitmodules --get-regexp path|awk '{print $2}'`; do 
+
+    pushd $directory; 
+
+    (git pull origin master);
+
+    popd; 
+
+done
