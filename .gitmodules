@@ -238,3 +238,9 @@
 	path = ruby-unicode-display_width
 	url = https://aur.archlinux.org/ruby-unicode-display_width
 	ignore = untracked
+[submodule "ruby-thor"]
+	path = ruby-thor
+	url = https://aur.archlinux.org/ruby-thor.git
+[submodule "ruby-foreman"]
+	path = ruby-foreman
+	url = https://aur.archlinux.org/ruby-foreman.git
