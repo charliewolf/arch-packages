@@ -210,3 +210,31 @@
 	path = mu
 	url = https://aur.archlinux.org/mu.git
 	ignore = untracked
+[submodule "ruby-rubocop"]
+	path = ruby-rubocop
+	url = https://aur.archlinux.org/ruby-rubocop.git
+	ignore = untracked
+[submodule "ruby-powerpack"]
+	path = ruby-powerpack
+	url = https://aur.archlinux.org/ruby-powerpack.git
+	ignore = untracked
+[submodule "ruby-yard"]
+	path = ruby-yard
+	url = https://aur.archlinux.org/ruby-yard.git
+	ignore = untracked
+[submodule "ruby-ast"]
+	path = ruby-ast
+	url = https://aur.archlinux.org/ruby-ast
+	ignore = untracked
+[submodule "ruby-parser"]
+	path = ruby-parser
+	url = https://aur.archlinux.org/ruby-parser
+	ignore = untracked
+[submodule "ruby-ruby-progressbar"]
+	path = ruby-ruby-progressbar
+	url = https://aur.archlinux.org/ruby-ruby-progressbar
+	ignore = untracked
+[submodule "ruby-unicode-display_width"]
+	path = ruby-unicode-display_width
+	url = https://aur.archlinux.org/ruby-unicode-display_width
+	ignore = untracked
